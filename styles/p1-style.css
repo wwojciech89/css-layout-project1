@@ -1,0 +1,232 @@
+html {
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+}
+
+*,
+::after,
+::before {
+  box-sizing: inherit;
+}
+
+/*  Header  */
+body {
+  display: flex;
+  background-color: black;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header__container {
+  height: 10vh;
+  background-color: black;
+  width: 100%;
+}
+
+/* Main */
+
+.container {
+  margin-top: 3px;
+  height: 88vh;
+  display: grid;
+  max-width: 1200px;
+  grid-template-columns: 275px 275px 275px 275px;
+  grid-template-rows: repeat(6, 150px);
+  grid-gap: 15px;
+  background-color: black;
+}
+
+.container__item {
+  grid-column: span 2;
+  display: block;
+  align-items: center;
+  justify-content: center;
+  border-radius: 80px;
+  background-image: url("../pictures/piwo2");
+  background-size: 612px;
+  background-repeat: no-repeat;
+  background-color: #299a96;
+  background-position: 184%, 50%;
+  box-shadow: 0px 2px rgb(27, 27, 27);
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+}
+
+.container__item4 {
+  background-color: #ddf114;
+  background-image: url("../pictures/piwo4.png");
+}
+.container__item5 {
+  background-color: #f14014;
+  background-image: url("../pictures/piwo5.png");
+}
+.container__item7 {
+  background-color: #1484f1;
+  background-image: url("../pictures/piwo7.png");
+}
+.container__item9 {
+  background-color: #14cbf1;
+  background-image: url("../pictures/piwo9.png");
+}
+.container__item10 {
+  background-color: #d6f114;
+  background-image: url("../pictures/piwo10.png");
+}
+.container__item12 {
+  background-color: #fbef79;
+  background-image: url("../pictures/piwo12.png");
+}
+.container__item14 {
+  background-color: #46bfe9;
+  background-image: url("../pictures/piwo14.png");
+}
+.container__item15 {
+  background-color: #ffd100;
+  background-image: url("../pictures/piwo15.png");
+}
+
+.container__item:hover {
+  background-position: 200%, 50%;
+}
+
+.container__itemShort {
+  grid-column: span 1;
+  display: block;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  border-radius: 30px;
+  background-image: url("../pictures/bocznepiwo.png");
+  background-position: 95% 2%;
+  transition: all 0.4s ease-in-out;
+}
+
+.container__itemShort:hover {
+  background-position: 10% 2%;
+}
+.beer__titleShort {
+  color: white;
+  font-size: 30px;
+}
+
+.beer__link {
+  text-decoration: none;
+}
+.beer__informationContainer {
+  display: flex;
+  flex-direction: column;
+  height: 150px;
+  width: 200px;
+  justify-content: center;
+  text-align: center;
+}
+
+.beer__container {
+  display: flex;
+  justify-content: center;
+  height: 150px;
+  align-items: center;
+}
+
+.beer__containerLong {
+  display: flex;
+  justify-content: center;
+  height: 150px;
+  align-items: center;
+  margin-left: 100px;
+}
+
+.beer__title {
+  text-decoration: none;
+  color: whitesmoke;
+  margin: 0px 0px 0px 0px;
+  font-weight: 700;
+  font-size: 30px;
+  text-align: left;
+}
+
+.beer__paragraph {
+  margin: 0px;
+  color: whitesmoke;
+  font-weight: 700;
+  text-align: left;
+}
+
+@media (max-width: 1160px) {
+  .container {
+    grid-template-columns: 275px 275px;
+    grid-template-rows: repeat(12, 150px);
+  }
+  .a2 {
+    grid-column: 2/3;
+    grid-row: 1/2;
+  }
+  .a3 {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+  .a4 {
+    grid-column: 2/3;
+    grid-row: 2/3;
+  }
+  .a5 {
+    grid-column: 1/2;
+    grid-row: 3/4;
+  }
+  .a6 {
+    grid-column: 2/3;
+    grid-row: 3/4;
+  }
+}
+
+@media (max-width: 590px) {
+  .container {
+    grid-template-columns: 275px;
+    grid-template-rows: repeat(12, 150px);
+  }
+  .beer__containerLong {
+    margin-left: 0;
+  }
+  .a2,
+  .a4,
+  .a6 {
+    background-position: 72% 2%;
+  }
+  .a2:hover,
+  .a4:hover,
+  .a6:hover {
+    background-position: 30% 2%;
+  }
+}
+@media (max-width: 515px) {
+  .container {
+    grid-template-columns: 275px;
+    grid-template-rows: repeat(15, 150px);
+  }
+  .a2 {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    background-position: 95% 2%;
+  }
+  .a3 {
+    grid-column: 1/2;
+    grid-row: 3/4;
+    background-position: 95% 2%;
+  }
+  .a4 {
+    grid-column: 1/2;
+    grid-row: 4/5;
+    background-position: 95% 2%;
+  }
+  .a5 {
+    grid-column: 1/2;
+    grid-row: 5/6;
+    background-position: 95% 2%;
+  }
+  .a6 {
+    grid-column: 1/2;
+    grid-row: 6/7;
+    background-position: 95% 2%;
+  }
+}
